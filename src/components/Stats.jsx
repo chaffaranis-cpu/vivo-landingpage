@@ -1,7 +1,7 @@
 import React from 'react'
 
 const stats = [
-  { number: '24/7', label: 'Notfallbereitschaft' },
+  { number: '3+', label: 'Jahre Erfahrung' },
   { number: '100%', label: 'Persönlicher Service' },
   { number: 'KA', label: 'Karlsruhe & Umgebung' },
   { number: '0€', label: 'Kostenloses Erstgespräch' },

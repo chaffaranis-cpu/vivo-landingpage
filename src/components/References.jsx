@@ -3,27 +3,27 @@ import React, { useState } from 'react'
 const projects = [
   {
     id: 1,
-    category: 'Renovierung',
-    title: 'Projekt 1',
+    category: 'Reinigung',
+    title: 'Terrassen- & Wegplatten-Reinigung',
     location: 'Karlsruhe',
-    before: null,
-    after: null,
+    before: '/images/terrasse-vorher.jpg',
+    after: '/images/terrasse-nachher.jpg',
   },
   {
     id: 2,
     category: 'Dachreinigung',
-    title: 'Projekt 2',
+    title: 'Flachdach-Reinigung',
     location: 'Karlsruhe',
-    before: null,
-    after: null,
+    before: '/images/dach-vorher.jpg',
+    after: '/images/dach-nachher.jpg',
   },
   {
     id: 3,
-    category: 'Gartenpflege',
-    title: 'Projekt 3',
+    category: 'Renovierung',
+    title: 'Bodenbelag & Malerarbeiten',
     location: 'Karlsruhe',
-    before: null,
-    after: null,
+    before: '/images/sanierung-vorher.jpg',
+    after: '/images/sanierung-nachher.jpg',
   },
 ]
 

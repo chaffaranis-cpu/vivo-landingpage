@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: 'Hausmeister & Haustechnik',
-    desc: 'Wartung, Kleinreparaturen und 24/7 Notfallbereitschaft — wir sind da, wenn Sie uns brauchen.',
+    desc: 'Wartung, Kleinreparaturen und Notfallbereitschaft — wir sind da, wenn Sie uns brauchen.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
