@@ -13,8 +13,7 @@ export default function Home() {
     <>
       {/* ── HERO ── */}
       <section className="hero">
-        <div className="hero__bg" />
-        <div className="container">
+        <div className="hero__left">
           <div className="hero__content">
             <div className="hero__eyebrow">Frankfurt &amp; Rhein-Main</div>
             <h1 className="hero__h1">
@@ -23,35 +22,45 @@ export default function Home() {
               Perfekt betreut.
             </h1>
             <p className="hero__sub">
-              Hausmeisterservice, Objektbetreuung, Gartenpflege und Winterdienst
-              für Eigentümer, Hausverwaltungen und Gewerbeobjekte im Rhein-Main-Gebiet.
-              Zuverlässig, termintreu, persönlich.
+              Objektbetreuung, Gartenpflege und Winterdienst
+              für Eigentümer und Hausverwaltungen. Persönlich, zuverlässig, termintreu.
             </p>
             <div className="hero__actions">
               <Link to="/kontakt" className="btn-gold">Kostenloses Erstgespräch</Link>
               <Link to="/kontakt" className="btn-outline">Rückruf in 24 Stunden</Link>
             </div>
-            {/* Trust Bar */}
             <div className="trust-bar">
-              {[
-                'Über 100 betreute Objekte',
-                'Frankfurt & Rhein-Main',
-                'Zuverlässig & termintreu',
-                'Persönlicher Ansprechpartner',
-              ].map(t => (
-                <div className="trust-bar__item" key={t}>
-                  <CheckIcon />
-                  {t}
-                </div>
+              {['100+ Objekte betreut', 'Frankfurt & Rhein-Main', '24h Reaktionszeit'].map(t => (
+                <div className="trust-bar__item" key={t}><CheckIcon />{t}</div>
               ))}
             </div>
           </div>
+          <div className="hero__scroll">
+            <div className="hero__scroll-line" />
+            Scroll
+          </div>
         </div>
-        <div className="hero__scroll">
-          <div className="hero__scroll-line" />
-          Scroll
+        <div className="hero__right">
+          <img src="/images/terrasse-nachher.jpg" alt="Professionelle Reinigung" />
         </div>
       </section>
+
+      {/* ── BILD-SERVICES ── */}
+      <div className="img-services">
+        {[
+          { img: '/images/terrasse-vorher.jpg', label: 'Reinigung', title: 'Hochdruck­reinigung' },
+          { img: '/images/dach-nachher.jpg',    label: 'Pflege',    title: 'Dachreinigung' },
+          { img: '/images/sanierung-nachher.jpg',label: 'Schutz',   title: 'Renovierung' },
+        ].map(s => (
+          <div className="img-svc" key={s.title}>
+            <img src={s.img} alt={s.title} />
+            <div className="img-svc__overlay">
+              <div className="img-svc__label">{s.label}</div>
+              <div className="img-svc__title">{s.title}</div>
+            </div>
+          </div>
+        ))}
+      </div>
 
       {/* ── STATS ── */}
       <div className="statsbar">
