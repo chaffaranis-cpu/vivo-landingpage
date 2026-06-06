@@ -884,6 +884,39 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   color: rgba(255,255,255,0.2);
 }
 
+/* ── BOTTOM NAV (Mobile only) ── */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 600;
+  background: var(--black);
+  border-top: 1px solid rgba(201,169,107,0.18);
+  padding: 0 0 env(safe-area-inset-bottom, 0);
+}
+.bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 4px 8px;
+  color: rgba(255,255,255,0.35);
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.bottom-nav__item.active {
+  color: var(--gold);
+}
+.bottom-nav__icon { line-height: 0; }
+.bottom-nav__label {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .featured__grid { grid-template-columns: repeat(2, 1fr); }
@@ -895,6 +928,9 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 }
 
 @media (max-width: 768px) {
+  .bottom-nav { display: flex; }
+  main { padding-bottom: 72px; }
+
   .nav__links { display: none; }
   .nav__burger { display: flex; }
 
@@ -919,10 +955,42 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 
 @media (max-width: 480px) {
   .hero { padding-top: 68px; }
-  .hero__content { padding: 3rem 0 3.5rem; }
-  .statsbar { padding: 2rem 0; }
-  .featured, .trust, .ueber-intro, .leistungen-grid, .ref-page, .kontakt-page { padding: 4rem 0; }
-  .kontakt-form-wrap { padding: 2rem 1.5rem; }
-  .lsvc-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .hero__content { padding: 2.5rem 0 3rem; }
+  .hero__h1 { font-size: 2.6rem; line-height: 1.08; }
+  .hero__sub { font-size: 1rem; }
+  .hero__eyebrow { font-size: 0.58rem; letter-spacing: 3px; }
+
+  .statsbar { padding: 1.75rem 0; }
+  .statsbar__num { font-size: 2.2rem; }
+  .statsbar__label { font-size: 0.55rem; letter-spacing: 1.5px; }
+
+  .featured, .trust, .ueber-intro,
+  .leistungen-grid, .ref-page, .kontakt-page { padding: 3.5rem 0; }
+
+  .featured__header { margin-bottom: 2rem; }
+  .svc-card { padding: 2rem 1.5rem; }
+  .svc-card__num { font-size: 2.5rem; margin-bottom: 1rem; }
+  .svc-card__title { font-size: 1.1rem; }
+
+  .page-hero__content { padding: 3rem 0 3.5rem; }
+  .page-hero__title { font-size: 2.2rem; }
+
+  .lsvc-item { grid-template-columns: 1fr; gap: 0.5rem; padding: 2rem 1.5rem; }
   .lsvc-num { font-size: 2rem; }
+  .lsvc-title { font-size: 1.1rem; }
+
+  .kontakt-form-wrap { padding: 2rem 1.25rem; }
+  .kontakt-form-wrap h3 { font-size: 1.35rem; }
+
+  .ueber-visual { padding: 2rem 1.5rem; }
+
+  .ref-page__grid { gap: 1.25rem; }
+
+  .section-title { font-size: 1.75rem; }
+  .section-sub { font-size: 0.92rem; }
+
+  .trust__inner { gap: 2.5rem; }
+  .trust__card-body { padding: 2rem 1.5rem; }
+  .impressum { padding: 4rem 0; }
+  .impressum h2 { font-size: 1.6rem; }
 }

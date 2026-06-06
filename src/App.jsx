@@ -2,9 +2,10 @@ import React from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import './styles.css'
 
-import Popup    from './components/Popup'
-import Nav      from './components/Nav'
-import Footer   from './components/Footer'
+import Popup     from './components/Popup'
+import Nav       from './components/Nav'
+import Footer    from './components/Footer'
+import BottomNav from './components/BottomNav'
 
 import Home       from './pages/Home'
 import Leistungen from './pages/Leistungen'
@@ -36,6 +37,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <BottomNav />
     </BrowserRouter>
   )
 }
