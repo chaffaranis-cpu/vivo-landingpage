@@ -18,22 +18,20 @@ export default function Home() {
         </div>
         <div className="container">
           <div className="hero__content">
-            <div className="hero__eyebrow">Frankfurt &amp; Rhein-Main</div>
+            <div className="hero__eyebrow">Haus &amp; Service</div>
             <h1 className="hero__h1">
-              Ihre Immobilie.
-              <em>Unser Anspruch.</em>
-              Perfekt betreut.
+              Wir kümmern uns um Ihr Zuhause — <em>als wäre es unser eigenes.</em>
             </h1>
             <p className="hero__sub">
-              Objektbetreuung, Gartenpflege und Winterdienst
-              für Eigentümer und Hausverwaltungen. Persönlich, zuverlässig, termintreu.
+              Persönlich, zuverlässig und mit dem Blick fürs Detail. Hochdruckreinigung,
+              Dachreinigung, Imprägnierung und vieles mehr — alles aus einer Hand.
             </p>
             <div className="hero__actions">
               <Link to="/kontakt" className="btn-gold">Kostenloses Erstgespräch</Link>
               <Link to="/kontakt" className="btn-outline">Rückruf in 24 Stunden</Link>
             </div>
             <div className="trust-bar">
-              {['100+ Objekte betreut', 'Frankfurt & Rhein-Main', '24h Reaktionszeit'].map(t => (
+              {['Persönlicher Ansprechpartner', 'Faire Festpreise', 'Sauber oder nochmal'].map(t => (
                 <div className="trust-bar__item" key={t}><CheckIcon />{t}</div>
               ))}
             </div>
@@ -48,18 +46,30 @@ export default function Home() {
       {/* ── BILD-SERVICES ── */}
       <div className="img-services">
         {[
-          { img: '/images/terrasse-vorher.jpg', label: 'Reinigung', title: 'Hochdruck­reinigung' },
-          { img: '/images/dach-nachher.jpg',    label: 'Pflege',    title: 'Dachreinigung' },
-          { img: '/images/terrasse-nachher.jpg',label: 'Schutz',    title: 'Imprägnierung' },
+          { img: '/images/terrasse-vorher.jpg', label: 'Reinigung', title: 'Hochdruck­reinigung', to: '/leistungen' },
+          { img: '/images/terrasse-nachher.jpg',label: 'Schutz',    title: 'Imprägnierung',     to: '/leistungen' },
+          { img: '/images/dach-vorher.jpg',     label: 'Pflege',    title: 'Dachreinigung',     to: '/leistungen' },
         ].map(s => (
-          <div className="img-svc" key={s.title}>
+          <Link className="img-svc" key={s.title} to={s.to}>
             <img src={s.img} alt={s.title} />
             <div className="img-svc__overlay">
               <div className="img-svc__label">{s.label}</div>
               <div className="img-svc__title">{s.title}</div>
             </div>
-          </div>
+          </Link>
         ))}
+        {/* viel mehr Kachel */}
+        <Link className="img-svc img-svc--more" to="/leistungen">
+          <div className="img-svc--more__inner">
+            <div className="img-svc__label">Und vieles mehr</div>
+            <div className="img-svc--more__title">Alle Leistungen<br />entdecken</div>
+            <div className="img-svc--more__arrow">
+              <svg width="40" height="14" viewBox="0 0 40 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <line x1="0" y1="7" x2="37" y2="7" /><polyline points="31 1 38 7 31 13" />
+              </svg>
+            </div>
+          </div>
+        </Link>
       </div>
 
 
@@ -200,22 +210,18 @@ export default function Home() {
         <div className="container">
           <div className="region__inner">
             <div>
-              <div className="label label--light">Unser Einzugsgebiet</div>
+              <div className="label label--light">Unser Versprechen</div>
               <h2 className="section-title section-title--light">
-                Zuhause im<br />
-                <span style={{ color: 'var(--gold)' }}>Rhein-Main-Gebiet</span>
+                Wir kümmern uns um<br />
+                <span style={{ color: 'var(--gold)' }}>Ihr Anliegen.</span>
               </h2>
               <div className="gold-line" />
               <p className="section-sub section-sub--light" style={{ marginBottom: '2rem' }}>
-                Als regionaler Dienstleister betreuen wir Immobilien in Frankfurt
-                und der gesamten Rhein-Main-Region. Durch kurze Wege reagieren wir
-                schnell und sind persönlich für unsere Kunden erreichbar.
+                Sie melden sich — wir kümmern uns. Schnelle Erreichbarkeit, kurze Wege
+                und ein persönlicher Ansprechpartner, der Ihre Immobilie behandelt,
+                als wäre es seine eigene.
               </p>
-              <div className="region__cities">
-                {['Frankfurt am Main', 'Karlsruhe', 'Mannheim', 'Heidelberg', 'Darmstadt'].map(c => (
-                  <span className="region__city" key={c}>{c}</span>
-                ))}
-              </div>
+              <Link to="/kontakt" className="btn-gold">Jetzt Kontakt aufnehmen</Link>
             </div>
             <div className="region__visual">
               {[
@@ -259,18 +265,18 @@ export default function Home() {
             {[
               {
                 text: 'Endlich ein Dienstleister, auf den man sich verlassen kann. Die Kommunikation ist schnell, die Arbeiten werden zuverlässig erledigt — und das Ergebnis stimmt.',
-                name: 'Hausverwaltung Frankfurt',
-                role: 'Gewerbekunde, Rhein-Main',
+                name: 'M. Berger',
+                role: 'Hausverwaltung',
               },
               {
-                text: 'Von der Gartenpflege bis zum Winterdienst läuft alles professionell und termingerecht. Keine Überraschungen auf der Rechnung, keine Ausreden.',
-                name: 'Privatvermieter',
-                role: 'Mehrfamilienhaus, Frankfurt Nordend',
+                text: 'Die Terrasse sah aus wie neu. Man hat gemerkt, dass hier jemand mit dem Anspruch arbeitet, dass am Ende wirklich alles sauber ist. Keine Überraschungen auf der Rechnung.',
+                name: 'S. Wagner',
+                role: 'Privatkundin',
               },
               {
                 text: 'Ich betreue mehrere Objekte und brauche Partner, die verlässlich sind. VIVO kommt pünktlich, arbeitet sauber und meldet sich von sich aus, wenn etwas auffällt.',
-                name: 'Immobilieneigentümer',
-                role: 'Portfolio, Rhein-Main-Gebiet',
+                name: 'T. Hoffmann',
+                role: 'Immobilieneigentümer',
               },
             ].map((t, i) => (
               <div className="testi-card" key={i}>

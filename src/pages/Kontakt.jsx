@@ -84,7 +84,7 @@ export default function Kontakt() {
                   </div>
                   <div>
                     <div className="kinfo-label">Standort</div>
-                    <div className="kinfo-value">Frankfurt &amp; Rhein-Main</div>
+                    <div className="kinfo-value">Persönlich vor Ort</div>
                   </div>
                 </div>
                 <div className="kinfo-item">
