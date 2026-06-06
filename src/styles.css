@@ -317,7 +317,10 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .img-services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 420px;
+  gap: 1.5px;
+  height: 460px;
+  margin-top: 6rem;
+  background: rgba(22,35,63,0.08);
 }
 .img-svc {
   position: relative; overflow: hidden; cursor: default;

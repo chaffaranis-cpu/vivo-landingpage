@@ -50,7 +50,7 @@ export default function Home() {
         {[
           { img: '/images/terrasse-vorher.jpg', label: 'Reinigung', title: 'Hochdruck­reinigung' },
           { img: '/images/dach-nachher.jpg',    label: 'Pflege',    title: 'Dachreinigung' },
-          { img: '/images/sanierung-nachher.jpg',label: 'Schutz',   title: 'Renovierung' },
+          { img: '/images/terrasse-nachher.jpg',label: 'Schutz',    title: 'Imprägnierung' },
         ].map(s => (
           <div className="img-svc" key={s.title}>
             <img src={s.img} alt={s.title} />
