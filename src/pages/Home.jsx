@@ -83,23 +83,33 @@ export default function Home() {
             {[
               {
                 n: '01',
-                title: 'Objektbetreuung',
-                text: 'Regelmäßige Kontrollen, Instandhaltung und vollständige Betreuung Ihrer Immobilie — damit Sie sich um nichts kümmern müssen.',
+                title: 'Hochdruckreinigung',
+                text: 'Terrassen, Einfahrten, Fassaden und Pflasterflächen — gründlich gereinigt, ohne die Oberfläche zu beschädigen.',
               },
               {
                 n: '02',
-                title: 'Gartenpflege',
-                text: 'Ganzjährige Pflege von Grünanlagen und Außenbereichen. Vom Rasenmähen bis zur Heckenschnitt — professionell und verlässlich.',
+                title: 'Dachreinigung',
+                text: 'Moos, Algen und Schmutz verkürzen die Lebensdauer Ihres Daches. Wir entfernen das Problem an der Wurzel.',
               },
               {
                 n: '03',
-                title: 'Winterdienst',
-                text: 'Pünktliche Schneeräumung und Streudienst nach gesetzlichen Vorgaben. Keine Ausreden, kein Zuspätkommen.',
+                title: 'Imprägnierung',
+                text: 'Nach der Reinigung kommt der Schutz. Wir versiegeln Dach und Oberflächen dauerhaft gegen Feuchtigkeit und Moos.',
               },
               {
                 n: '04',
-                title: 'Kleinreparaturen',
-                text: 'Schnelle Lösungen für kleine Schäden, bevor größere Kosten entstehen. Wir kommen, bevor das Problem wächst.',
+                title: 'Hausmeisterservice',
+                text: 'Regelmäßige Kontrollen, Instandhaltung und vollständige Betreuung Ihrer Immobilie — damit Sie sich um nichts kümmern müssen.',
+              },
+              {
+                n: '05',
+                title: 'Gartenpflege',
+                text: 'Ganzjährige Pflege von Grünanlagen und Außenbereichen. Vom Rasenmähen bis zum Heckenschnitt — professionell und verlässlich.',
+              },
+              {
+                n: '06',
+                title: 'Winterdienst',
+                text: 'Pünktliche Schneeräumung und Streudienst nach gesetzlichen Vorgaben. Keine Ausreden, kein Zuspätkommen.',
               },
             ].map(s => (
               <div className="svc-card" key={s.n}>
