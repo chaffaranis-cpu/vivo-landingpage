@@ -2,27 +2,48 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../components/Logo'
 
+const CheckIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="20 6 9 17 4 12"/>
+  </svg>
+)
+
 export default function Home() {
   return (
     <>
-      {/* HERO */}
+      {/* ── HERO ── */}
       <section className="hero">
         <div className="hero__bg" />
         <div className="container">
           <div className="hero__content">
-            <div className="hero__eyebrow">Reinigung &amp; Werterhalt</div>
+            <div className="hero__eyebrow">Frankfurt &amp; Rhein-Main</div>
             <h1 className="hero__h1">
-              Sauber.
-              <em>Gepflegt.</em>
-              Gemacht.
+              Ihre Immobilie.
+              <em>Unser Anspruch.</em>
+              Perfekt betreut.
             </h1>
             <p className="hero__sub">
-              Wir reinigen, was andere liegen lassen. Hochdruckreinigung, Dachreinigung
-              und Imprägnierung auf Profi-Niveau — ohne Schäden, ohne Kompromisse.
+              Hausmeisterservice, Objektbetreuung, Gartenpflege und Winterdienst
+              für Eigentümer, Hausverwaltungen und Gewerbeobjekte im Rhein-Main-Gebiet.
+              Zuverlässig, termintreu, persönlich.
             </p>
             <div className="hero__actions">
-              <Link to="/kontakt" className="btn-gold">Jetzt anfragen</Link>
-              <Link to="/leistungen" className="btn-outline">Alle Leistungen</Link>
+              <Link to="/kontakt" className="btn-gold">Kostenloses Erstgespräch</Link>
+              <Link to="/kontakt" className="btn-outline">Rückruf in 24 Stunden</Link>
+            </div>
+            {/* Trust Bar */}
+            <div className="trust-bar">
+              {[
+                'Über 100 betreute Objekte',
+                'Frankfurt & Rhein-Main',
+                'Zuverlässig & termintreu',
+                'Persönlicher Ansprechpartner',
+              ].map(t => (
+                <div className="trust-bar__item" key={t}>
+                  <CheckIcon />
+                  {t}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -32,39 +53,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS */}
+      {/* ── STATS ── */}
       <div className="statsbar">
         <div className="container">
           <div className="statsbar__grid">
             <div className="statsbar__item">
-              <div className="statsbar__num">★★★★★</div>
-              <div className="statsbar__label">Kundenzufriedenheit</div>
+              <div className="statsbar__num">100+</div>
+              <div className="statsbar__label">Betreute Objekte</div>
+            </div>
+            <div className="statsbar__item">
+              <div className="statsbar__num">24h</div>
+              <div className="statsbar__label">Reaktionszeit</div>
+            </div>
+            <div className="statsbar__item">
+              <div className="statsbar__num">365</div>
+              <div className="statsbar__label">Tage Einsatzbereitschaft</div>
             </div>
             <div className="statsbar__item">
               <div className="statsbar__num">100%</div>
               <div className="statsbar__label">Persönlicher Service</div>
             </div>
-            <div className="statsbar__item">
-              <div className="statsbar__num">3</div>
-              <div className="statsbar__label">Kernleistungen</div>
-            </div>
-            <div className="statsbar__item">
-              <div className="statsbar__num">0€</div>
-              <div className="statsbar__label">Kostenloses Erstgespräch</div>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* FEATURED SERVICES */}
+      {/* ── SERVICES ── */}
       <section className="featured">
         <div className="container">
           <div className="featured__header">
             <div>
-              <div className="label">Was wir machen</div>
+              <div className="label">Immobilienpflege aus einer Hand</div>
               <h2 className="section-title">Unsere Kernleistungen</h2>
               <p className="section-sub">
-                Drei Bereiche, in denen wir keine Abstriche machen.
+                Nicht jeder Dienstleister kommt pünktlich, arbeitet sauber und
+                ist danach noch erreichbar. Wir schon.
               </p>
             </div>
             <Link to="/leistungen" className="btn-gold" style={{ whiteSpace: 'nowrap' }}>
@@ -75,18 +97,23 @@ export default function Home() {
             {[
               {
                 n: '01',
-                title: 'Hochdruckreinigung',
-                text: 'Terrassen, Einfahrten, Fassaden und Pflasterflächen — gründlich gereinigt, ohne die Oberfläche zu beschädigen. Professionelle Geräte, erfahrene Hände.',
+                title: 'Objektbetreuung',
+                text: 'Regelmäßige Kontrollen, Instandhaltung und vollständige Betreuung Ihrer Immobilie — damit Sie sich um nichts kümmern müssen.',
               },
               {
                 n: '02',
-                title: 'Dachreinigung',
-                text: 'Moos, Algen und Schmutz verkürzen die Lebensdauer Ihres Daches. Wir entfernen das Problem an der Wurzel — schonend und wirksam.',
+                title: 'Gartenpflege',
+                text: 'Ganzjährige Pflege von Grünanlagen und Außenbereichen. Vom Rasenmähen bis zur Heckenschnitt — professionell und verlässlich.',
               },
               {
                 n: '03',
-                title: 'Imprägnierung',
-                text: 'Nach der Reinigung kommt der Schutz. Unsere Imprägnierung versiegelt Dach und Oberflächen dauerhaft gegen Feuchtigkeit, Moos und Algen.',
+                title: 'Winterdienst',
+                text: 'Pünktliche Schneeräumung und Streudienst nach gesetzlichen Vorgaben. Keine Ausreden, kein Zuspätkommen.',
+              },
+              {
+                n: '04',
+                title: 'Kleinreparaturen',
+                text: 'Schnelle Lösungen für kleine Schäden, bevor größere Kosten entstehen. Wir kommen, bevor das Problem wächst.',
               },
             ].map(s => (
               <div className="svc-card" key={s.n}>
@@ -99,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST */}
+      {/* ── WARUM VIVO ── */}
       <section className="trust">
         <div className="container">
           <div className="trust__inner">
@@ -109,20 +136,29 @@ export default function Home() {
                 Kein Callcenter.<br />Kein Subunternehmer.
               </h2>
               <div className="gold-line" />
-              <p className="section-sub section-sub--light" style={{ marginBottom: '2rem' }}>
-                Sie sprechen direkt mit den Inhabern — und die kommen auch selbst.
+              <p className="section-sub section-sub--light" style={{ marginBottom: '2.5rem' }}>
+                Bei VIVO Haus &amp; Service kümmern wir uns um Immobilien so, als wären
+                es unsere eigenen. Unkomplizierte Zusammenarbeit, schnelle Erreichbarkeit
+                und saubere Ausführung — das ist unser Anspruch.
               </p>
               <div className="trust__points">
                 {[
-                  { title: 'Direkter Ansprechpartner', text: 'Kein Weitervermitteln. Anis oder Amin nehmen ab — und kommen selbst.' },
-                  { title: 'Klare Preise vorher', text: 'Kein böses Erwachen auf der Rechnung. Was wir anbieten, gilt.' },
-                  { title: 'Sauber oder nochmal', text: 'Wenn das Ergebnis nicht stimmt, kommen wir nochmal. Punkt.' },
+                  {
+                    title: 'Direkter Ansprechpartner',
+                    text: 'Kein Weitervermitteln. Anis oder Amin nehmen ab — und kommen selbst.',
+                  },
+                  {
+                    title: 'Transparente Preise',
+                    text: 'Kein böses Erwachen auf der Rechnung. Was wir anbieten, das gilt.',
+                  },
+                  {
+                    title: 'Sauber oder nochmal',
+                    text: 'Wenn das Ergebnis nicht stimmt, kommen wir nochmal. Punkt.',
+                  },
                 ].map(p => (
                   <div className="trust__point" key={p.title}>
                     <div className="trust__icon">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <polyline points="20 6 9 17 4 12"/>
-                      </svg>
+                      <CheckIcon />
                     </div>
                     <div>
                       <div className="trust__point-title">{p.title}</div>
@@ -144,16 +180,11 @@ export default function Home() {
                   <div className="trust__card-name">Anis Chaffar &amp; Amin Malaihi</div>
                   <div className="trust__card-role">Inhaber &amp; Geschäftsführer</div>
                   <div className="trust__contact-row">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     +49 176 5693 6883
                   </div>
                   <div className="trust__contact-row">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                      <polyline points="22,6 12,13 2,6"/>
-                    </svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     vivohaus.service@gmail.com
                   </div>
                   <div style={{ marginTop: '2rem' }}>
@@ -164,6 +195,82 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── REGION ── */}
+      <section className="region">
+        <div className="container">
+          <div className="region__inner">
+            <div>
+              <div className="label label--light">Unser Einzugsgebiet</div>
+              <h2 className="section-title section-title--light">
+                Zuhause im<br />
+                <span style={{ color: 'var(--gold)' }}>Rhein-Main-Gebiet</span>
+              </h2>
+              <div className="gold-line" />
+              <p className="section-sub section-sub--light" style={{ marginBottom: '2rem' }}>
+                Als regionaler Dienstleister betreuen wir Immobilien in Frankfurt
+                und der gesamten Rhein-Main-Region. Durch kurze Wege reagieren wir
+                schnell und sind persönlich für unsere Kunden erreichbar.
+              </p>
+              <div className="region__cities">
+                {['Frankfurt am Main', 'Offenbach', 'Wiesbaden', 'Mainz', 'Darmstadt', 'Bad Homburg', 'Hanau', 'Taunusstein'].map(c => (
+                  <span className="region__city" key={c}>{c}</span>
+                ))}
+              </div>
+            </div>
+            <div className="region__visual">
+              {[
+                { num: '100+', label: 'Betreute Objekte' },
+                { num: '24h', label: 'Reaktionszeit' },
+                { num: '365', label: 'Tage im Jahr' },
+                { num: '100%', label: 'Persönlich vor Ort' },
+              ].map(s => (
+                <div className="region__stat" key={s.label}>
+                  <div className="region__stat-num">{s.num}</div>
+                  <div className="region__stat-label">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section className="testimonials">
+        <div className="container">
+          <div className="label">Kundenstimmen</div>
+          <h2 className="section-title">Von Eigentümern empfohlen</h2>
+          <p className="section-sub">
+            Vertrauen durch Qualität, Zuverlässigkeit und saubere Arbeit.
+          </p>
+          <div className="testimonials__grid">
+            {[
+              {
+                text: 'Endlich ein Dienstleister, auf den man sich verlassen kann. Die Kommunikation ist schnell, die Arbeiten werden zuverlässig erledigt — und das Ergebnis stimmt.',
+                name: 'Hausverwaltung Frankfurt',
+                role: 'Gewerbekunde, Rhein-Main',
+              },
+              {
+                text: 'Von der Gartenpflege bis zum Winterdienst läuft alles professionell und termingerecht. Keine Überraschungen auf der Rechnung, keine Ausreden.',
+                name: 'Privatvermieter',
+                role: 'Mehrfamilienhaus, Frankfurt Nordend',
+              },
+              {
+                text: 'Ich betreue mehrere Objekte und brauche Partner, die verlässlich sind. VIVO kommt pünktlich, arbeitet sauber und meldet sich von sich aus, wenn etwas auffällt.',
+                name: 'Immobilieneigentümer',
+                role: 'Portfolio, Rhein-Main-Gebiet',
+              },
+            ].map((t, i) => (
+              <div className="testi-card" key={i}>
+                <p className="testi-text">{t.text}</p>
+                <div className="testi-divider" />
+                <div className="testi-name">{t.name}</div>
+                <div className="testi-role">{t.role}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
