@@ -11,9 +11,12 @@ const CheckIcon = () => (
 export default function Home() {
   return (
     <>
-      {/* ── HERO ── */}
+      {/* ── HERO (fullscreen image) ── */}
       <section className="hero">
-        <div className="hero__left">
+        <div className="hero__media">
+          <img src="/images/terrasse-nachher.jpg" alt="Gepflegte Außenanlage" />
+        </div>
+        <div className="container">
           <div className="hero__content">
             <div className="hero__eyebrow">Frankfurt &amp; Rhein-Main</div>
             <h1 className="hero__h1">
@@ -35,13 +38,10 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="hero__scroll">
-            <div className="hero__scroll-line" />
-            Scroll
-          </div>
         </div>
-        <div className="hero__right">
-          <img src="/images/terrasse-nachher.jpg" alt="Professionelle Reinigung" />
+        <div className="hero__scroll">
+          <div className="hero__scroll-line" />
+          Scroll
         </div>
       </section>
 
