@@ -62,29 +62,6 @@ export default function Home() {
         ))}
       </div>
 
-      {/* ── STATS ── */}
-      <div className="statsbar">
-        <div className="container">
-          <div className="statsbar__grid">
-            <div className="statsbar__item">
-              <div className="statsbar__num">100+</div>
-              <div className="statsbar__label">Betreute Objekte</div>
-            </div>
-            <div className="statsbar__item">
-              <div className="statsbar__num">24h</div>
-              <div className="statsbar__label">Reaktionszeit</div>
-            </div>
-            <div className="statsbar__item">
-              <div className="statsbar__num">365</div>
-              <div className="statsbar__label">Tage Einsatzbereitschaft</div>
-            </div>
-            <div className="statsbar__item">
-              <div className="statsbar__num">100%</div>
-              <div className="statsbar__label">Persönlicher Service</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* ── SERVICES ── */}
       <section className="featured">
@@ -225,7 +202,7 @@ export default function Home() {
                 schnell und sind persönlich für unsere Kunden erreichbar.
               </p>
               <div className="region__cities">
-                {['Frankfurt am Main', 'Offenbach', 'Wiesbaden', 'Mainz', 'Darmstadt', 'Bad Homburg', 'Hanau', 'Taunusstein'].map(c => (
+                {['Frankfurt am Main', 'Karlsruhe', 'Mannheim', 'Heidelberg', 'Darmstadt'].map(c => (
                   <span className="region__city" key={c}>{c}</span>
                 ))}
               </div>
@@ -243,6 +220,19 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA BANNER ── */}
+      <section className="cta-banner">
+        <div className="container">
+          <div className="cta-banner__inner">
+            <div>
+              <h2 className="cta-banner__title">Kostenloses Erstgespräch</h2>
+              <p className="cta-banner__sub">Unverbindlich. Persönlich. Innerhalb von 24 Stunden.</p>
+            </div>
+            <Link to="/kontakt" className="btn-gold">Jetzt anfragen</Link>
           </div>
         </div>
       </section>
