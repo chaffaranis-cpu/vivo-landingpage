@@ -18,19 +18,24 @@ const services = [
     tags: ['Dachimprägnierung', 'Terrassenversiegelung', 'Langzeitschutz'],
   },
   {
-    title: 'Hausmeister & Haustechnik',
-    text: 'Wartung, Kleinreparaturen und Notfallbereitschaft. Wir sind Ihr erster Anruf wenn etwas nicht stimmt — unkompliziert, verlässlich und ohne Aufschlag für Selbstverständlichkeiten.',
-    tags: ['Wartung', 'Kleinreparaturen', 'Notfall', 'Haustechnik'],
+    title: 'Gartenpflege & Landschaftsbau',
+    text: 'Rasenpflege, Heckenschnitt und Laubreinigung — und auf Wunsch die komplette Neugestaltung Ihres Außenbereichs. Von der laufenden Pflege bis zum neuen Garten.',
+    tags: ['Rasenpflege', 'Heckenschnitt', 'Pflasterarbeiten', 'Bepflanzung', 'Neugestaltung'],
   },
   {
-    title: 'Garten & Winterdienst',
-    text: 'Rasenpflege, Heckenschnitt, Laubreinigung im Herbst und Räumdienst im Winter. Alles was Ihr Außenbereich braucht, ohne drei verschiedene Dienstleister.',
-    tags: ['Rasenpflege', 'Heckenschnitt', 'Laubreinigung', 'Winterdienst', 'Streudienst'],
+    title: 'Winterdienst',
+    text: 'Pünktliche Schneeräumung und Streudienst nach gesetzlichen Vorgaben. Sie tragen die Verkehrssicherungspflicht — wir nehmen sie Ihnen ab.',
+    tags: ['Schneeräumung', 'Streudienst', 'Verkehrssicherung'],
   },
   {
     title: 'Renovierung & Bodenbelag',
     text: 'Malerarbeiten, Laminat, Fliesen und Kleinumbauten — wir übernehmen Renovierungen die sich lohnen. Sauber abgeschlossen, pünktlich übergeben.',
     tags: ['Malerarbeiten', 'Laminat', 'Fliesen', 'Kleinumbauten'],
+  },
+  {
+    title: 'Hausmeisterservice',
+    text: 'Wartung, Kleinreparaturen und Notfallbereitschaft. Wir sind Ihr erster Anruf wenn etwas nicht stimmt — unkompliziert, verlässlich und ohne Aufschlag für Selbstverständlichkeiten.',
+    tags: ['Wartung', 'Kleinreparaturen', 'Notfall', 'Haustechnik', 'Objektbetreuung'],
   },
 ]
 
